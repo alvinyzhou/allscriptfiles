@@ -15,10 +15,6 @@ node("master"){
     
     
     stage("print system properties"){
-        /*System.properties.each{
-        println it
-        }*/
-        
         // print build number
         println ${BUILD_NUMBER}
         println $BUILD_NUMBER
