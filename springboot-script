@@ -8,8 +8,13 @@ node("master"){
         bat returnStatus: true, script: 'mvn clean install '
         echo "return status bat end"
         
-        echo "simple bat start"
-        bat 'mvn clean install '
-        echo "simple bat end"
+        //echo "simple bat start"
+        //bat 'mvn clean install '
+        //echo "simple bat end"
+    }
+    
+    stage("print system properties"){
+        System.properties.each{
+        println it
     }
 }
