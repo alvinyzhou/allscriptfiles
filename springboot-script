@@ -13,9 +13,9 @@ node("master"){
         //echo "simple bat end"
     }
     
-    /*
+    
     stage("print system properties"){
-        System.properties.each{
+        /*System.properties.each{
         println it
         }*/
         
