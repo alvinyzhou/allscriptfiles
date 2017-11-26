@@ -16,5 +16,6 @@ node("master"){
     stage("print system properties"){
         System.properties.each{
         println it
+        }
     }
 }
