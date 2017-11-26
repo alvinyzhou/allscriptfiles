@@ -4,6 +4,6 @@ node("master"){
     }
 
     stage("mvn build"){
-        bat 'mvn clean install'
+        bat returnStatus: true, script: 'mvn clean install '
     }
 }
