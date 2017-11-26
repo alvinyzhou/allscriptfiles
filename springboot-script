@@ -17,5 +17,11 @@ node("master"){
         System.properties.each{
         println it
         }
+        
+        // print build number
+        println ${BUILD_NUMBER}
+        println $BUILD_NUMBER
+        // print build tag
+        println ${BUILD_TAG}
     }
 }
