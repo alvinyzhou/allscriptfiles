@@ -4,7 +4,12 @@ node("master"){
     }
 
     stage("mvn build"){
-        //bat returnStatus: true, script: 'mvn clean install '
+        echo "return status bat start"
+        bat returnStatus: true, script: 'mvn clean install '
+        echo "return status bat end"
+        
+        echo "simple bat start"
         bat 'mvn clean install '
+        echo "simple bat end"
     }
 }
