@@ -1,6 +1,9 @@
-stage("checkout"){
-    node('master'){
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'githubProfile', url: 'git@github.com:alvinyzhou/alvinSpBoot.git']]])
+node("master"){
+    stage("checkout"){
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'githubProfile', url: 'git@github.com:alvinyzhou/alvinSpBoot.git']]])   
     }
-    
+
+    stage("mvn build"){
+        bat 'mvn clean install'
+    }
 }
