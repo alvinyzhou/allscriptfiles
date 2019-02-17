@@ -17,13 +17,8 @@ node("master"){
     }
     
     
-   // stage("print system properties"){
-        // print build number
-        //println "build number"
-        //println ${env.BUILD_NUMBER}
-        //println $BUILD_NUMBER
-        // print build tag
-        //println ${BUILD_TAG}
-        // insert at 20180107
-   // }
+   stage("deploy to Tomcat"){
+        bat 'del /F /S /Q C:\apache-tomcat-7.0.92\webapps\comapp-0.0.1-SNAPSHOT.war'
+        bat 'copy target\comapp-0.0.1-SNAPSHOT.war C:\apache-tomcat-7.0.92\webapps\comapp-0.0.1-SNAPSHOT.war'
+   }
 }
