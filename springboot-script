@@ -5,7 +5,8 @@ node("master"){
 
     stage("mvn build"){
         echo "return status bat start"
-        bat returnStatus: true, script: 'mvn clean install '
+        //bat returnStatus: true, script: 'mvn clean install '
+        bat 'mvn clean install'
         echo "return status bat end"
         
         //echo "simple bat start"
