@@ -14,13 +14,13 @@ node("master"){
     }
     
     
-    stage("print system properties"){
+   // stage("print system properties"){
         // print build number
-        println "build number"
-        println ${env.BUILD_NUMBER}
+        //println "build number"
+        //println ${env.BUILD_NUMBER}
         //println $BUILD_NUMBER
         // print build tag
         //println ${BUILD_TAG}
         // insert at 20180107
-    }
+   // }
 }
