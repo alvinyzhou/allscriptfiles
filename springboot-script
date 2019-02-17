@@ -7,6 +7,7 @@ node("master"){
         echo "return status bat start"
         //bat returnStatus: true, script: 'mvn clean install '
         bat 'java -version'
+        bat 'echo %JAVA_HOME%'
         bat 'mvn clean install'
         echo "return status bat end"
         
