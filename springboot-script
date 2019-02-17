@@ -18,7 +18,7 @@ node("master"){
     
     
    stage("deploy to Tomcat"){
-        bat 'del /F /S /Q C:/apache-tomcat-7.0.92/webapps/comapp-0.0.1-SNAPSHOT.war'
-        bat 'copy target/comapp-0.0.1-SNAPSHOT.war C:/apache-tomcat-7.0.92/webapps/comapp-0.0.1-SNAPSHOT.war'
+        bat "del /F /S /Q C:/apache-tomcat-7.0.92/webapps/comapp-0.0.1-SNAPSHOT.war"
+        bat "copy target/comapp-0.0.1-SNAPSHOT.war C:/apache-tomcat-7.0.92/webapps/comapp-0.0.1-SNAPSHOT.war"
    }
 }
