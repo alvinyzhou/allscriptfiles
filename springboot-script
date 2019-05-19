@@ -18,6 +18,8 @@ node("master"){
     
     
    stage("deploy to Tomcat"){
+        echo "Current path"
+        sh "pwd"
         sh "sudo -i |Digital@2018"
         sh "./deploy.sh"
    }
