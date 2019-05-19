@@ -20,6 +20,8 @@ node("master"){
    stage("deploy to Tomcat"){
         echo "Current path"
         sh "pwd"
-        sh "./deploy.sh"
+        //sh "./deploy.sh"
+        sh "rm -r -f /home/ducex/apache-tomcat-8.5.23/webapps/comapp-0.0.1-SNAPSHOT.war"
+        sh "cp -f /root/.jenkins/workspace/demo/ci-cd-demo/target/comapp-0.0.1-SNAPSHOT.war /home/ducex/apache-tomcat-8.5.23/webapps/comapp-0.0.1-SNAPSHOT.war"
    }
 }
