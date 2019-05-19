@@ -18,6 +18,7 @@ node("master"){
     
     
    stage("deploy to Tomcat"){
+        sh "sudo -i |Digital@2018"
         sh "./deploy.sh"
    }
 }
